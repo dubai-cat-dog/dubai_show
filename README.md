@@ -66,23 +66,6 @@ npm run test:content
 └── package-lock.json       依赖锁定文件
 ```
 
-## 部署
-
-这是一个不依赖后端服务的静态网站，可以部署到 GitHub Pages、Cloudflare Pages 或其他静态托管平台。
-
-使用 GitHub Pages 时，建议通过 GitHub Actions 执行构建，并将构建结果目录设置为 `dist`。如果使用普通仓库作为项目站点，需要根据仓库名称配置 Vite 的 `base` 路径；如果使用用户主页仓库，则可以直接使用根路径。
-
-## 公开仓库注意事项
-
-- 不要提交 API 密钥、密码、令牌或其他凭据。
-- 不要提交 `.env` 文件、私钥、证书和本机生成的配置文件。
-- `node_modules/`、`dist/` 和缓存目录已通过 `.gitignore` 排除。
-- 依赖锁定文件应保留，以便部署环境使用一致的依赖版本。
-
-## 内容与资源
-
-项目图片和像素风角色资源位于 `public/assets/`。如果替换资源，请同步检查图片路径、替代文本和移动端显示效果。
-
 项目展示中的外部网站：
 
 - [Animals 3D](https://animals-3d.pages.dev/)
