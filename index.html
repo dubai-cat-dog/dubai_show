@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081426" />
+    <meta name="description" content="小唐的个人作品集——关注网页、软件与用户体验设计。" data-i18n-attr="content:meta.description" />
+    <title data-i18n="meta.title">小唐｜全栈设计与开发</title>
+    <link rel="icon" type="image/png" href="/assets/black-cat-scarf-pixel.png?v=cat" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="common.skip">跳到主要内容</a>
+    <div class="space-backdrop" aria-hidden="true"></div>
+    <canvas class="starfield" aria-hidden="true"></canvas>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="logo" href="#home" aria-label="返回首页" data-i18n-attr="aria-label:common.home">
+        <img src="/assets/black-cat-scarf-pixel.png" alt="" aria-hidden="true" />
+      </a>
+      <nav class="desktop-nav" aria-label="主要导航" data-i18n-attr="aria-label:common.navigation">
+        <ol>
+          <li><a href="#about"><span>01.</span> <span data-i18n="nav.about">关于我</span></a></li>
+          <li><a href="#work"><span>02.</span> <span data-i18n="nav.work">作品</span></a></li>
+          <li><a href="#journey"><span>03.</span> <span data-i18n="nav.journey">方向</span></a></li>
+          <li><a href="#contact"><span>04.</span> <span data-i18n="nav.contact">联系</span></a></li>
+        </ol>
+        <button class="language-toggle" type="button" data-language-toggle aria-pressed="false" aria-label="切换到英文">EN</button>
+        <a class="outline-button small" href="mailto:wshixiaotang@163.com" data-contact-trigger data-i18n="contact.open">给我留言</a>
+      </nav>
+      <button class="menu-button" type="button" aria-label="打开菜单" data-i18n-attr="aria-label:menu.open" aria-expanded="false" data-menu-button>
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <aside class="mobile-menu" aria-hidden="true" data-mobile-menu>
+      <nav aria-label="移动端导航" data-i18n-attr="aria-label:common.mobileNavigation">
+        <a href="#about"><span>01.</span><span data-i18n="nav.about">关于我</span></a>
+        <a href="#work"><span>02.</span><span data-i18n="nav.work">作品</span></a>
+        <a href="#journey"><span>03.</span><span data-i18n="nav.journey">方向</span></a>
+        <a href="#contact"><span>04.</span><span data-i18n="nav.contact">联系</span></a>
+        <button class="language-toggle" type="button" data-language-toggle aria-pressed="false" aria-label="切换到英文">EN</button>
+        <a class="outline-button" href="mailto:wshixiaotang@163.com" data-contact-trigger data-i18n="contact.open">给我留言</a>
+      </nav>
+    </aside>
+
+    <aside class="side-social" aria-label="社交链接" data-i18n-attr="aria-label:common.social">
+      <a href="mailto:wshixiaotang@163.com" aria-label="发送邮件" data-i18n-attr="aria-label:common.email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2Zm8 7 8-5H4l8 5Zm0 2.3L4 8v10h16V8l-8 5.3Z"/></svg>
+      </a>
+      <a href="#work" aria-label="查看作品" data-i18n-attr="aria-label:common.viewWork">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2Zm6 4V5H9v2h6Zm5 5H4v7h16v-7Zm0-3H4v1h16V9Z"/></svg>
+      </a>
+    </aside>
+    <aside class="side-email"><a href="mailto:wshixiaotang@163.com" data-contact-trigger>wshixiaotang@163.com</a></aside>
+
+    <main id="main">
+      <section class="hero section" id="home">
+        <p class="eyebrow reveal" data-i18n="hero.eyebrow">你好，我是</p>
+        <h1 class="reveal" data-i18n="hero.name">小唐。</h1>
+        <h2 class="reveal" data-i18n-html="hero.title">我把脑海里的想法，<br />做成可以使用的产品。</h2>
+        <p class="hero-copy reveal" data-i18n="hero.copy">我是一名正在朝着全栈设计师前进的创作者，喜欢探索网络世界、学习新知识，也喜欢亲手打磨网站和软件中的每一个细节。</p>
+        <div class="hero-actions reveal">
+          <a class="outline-button" href="#work" data-i18n="hero.work">看看我的作品</a>
+          <span class="status"><i></i> <span data-i18n="hero.status">正在探索新的合作机会</span></span>
+        </div>
+        <canvas class="hero-nebula" aria-hidden="true"></canvas>
+      </section>
+
+      <section class="section about" id="about">
+        <h2 class="section-title reveal"><span>01.</span> <span data-i18n="about.title">关于我</span></h2>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p data-i18n="about.paragraph1">你好！我是小唐。我喜欢探索网络世界、获取新知识，也喜欢把一个还停留在脑海里的想法，亲手变成真正可以打开、操作和持续使用的网站或软件。</p>
+            <p data-i18n-html="about.paragraph2">我目前正朝着<strong>全栈设计师</strong>的方向前进：从需求梳理、内容组织和界面设计开始，再到前端开发、数据接入和体验迭代，尽量把一件事情从想法完整地做到可用。我做过数据可视化网站、英语学习工具和桌面陪伴应用，也在这些项目里逐渐建立起自己的产品判断。</p>
+            <p data-i18n="about.paragraph3">我尤其在意那些容易被忽略的瞬间：第一次打开时是否知道从哪里开始，加载时有没有清晰反馈，复杂数据能不能被快速理解，用户犯错后是否还能自然地继续。我相信好的设计不只是漂亮的页面，而是让功能、内容和情绪都各就各位。</p>
+            <p data-i18n="about.paragraph4">最近，我把时间放在真实项目的打磨上：继续学习地图渲染与数据可视化，完善 TypeWords 的学习流程，也尝试用更轻量、更有性格的视觉语言表达自己的作品。</p>
+            <p data-i18n="about.skills">常用技术与工作方式：</p>
+            <ul class="skill-list">
+              <li>JavaScript / TypeScript</li><li>React / Vite</li><li>Tauri</li>
+              <li>C# / WinUI 3</li><li>MapLibre GL</li><li data-i18n="about.skillDesign">产品与 UI/UX 设计</li>
+            </ul>
+          </div>
+          <div class="portrait-wrap reveal">
+            <div class="portrait-frame" data-cat-stage tabindex="0" data-i18n-attr="aria-label:about.portraitAlt">
+              <img class="portrait-body" src="/assets/black-cat-scarf-pixel.png" alt="戴着红色围巾的黑色像素风猫咪" data-i18n-attr="alt:about.portraitAlt" />
+              <span class="portrait-head" aria-hidden="true"><img src="/assets/black-cat-scarf-pixel.png" alt="" /></span>
+            </div>
+            <span class="portrait-note" data-i18n="about.portraitNote">保持好奇，持续创造。</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <h2 class="section-title reveal"><span>02.</span> <span data-i18n="work.title">我做过的一些作品</span></h2>
+
+        <article class="featured-project reveal">
+          <div class="project-visual project-visual--animals">
+            <img src="/assets/animals-3d.png" alt="Animals 3D 濒危动物地球图谱界面" data-i18n-attr="alt:animals.imageAlt" loading="lazy" />
+          </div>
+          <div class="project-content">
+            <p class="project-kicker" data-i18n="project.featured">重点作品</p>
+            <h3 data-i18n="animals.title">Animals 3D · 濒危动物地球图谱</h3>
+            <div class="project-description">
+              <p data-i18n="animals.paragraph1">这是一个把 GBIF 与 iNaturalist 资料整理成可探索界面的数据可视化网站。用户可以先在可旋转的 3D 地球上观察物种分布，再连续过渡到 2D 地图，按区域、受威胁等级、名称和媒体资料逐步缩小范围。</p>
+              <p data-i18n="animals.paragraph2">项目的重点不只是“把地图做出来”，而是让物种数据拥有清晰的阅读路径：左侧统计面板帮助建立全局认知，地图标记提供空间线索，底部筛选区则把搜索、等级和区域条件放在同一条探索链路里。</p>
+              <div class="metric-row"><span><b>1584</b> <span data-i18n="animals.records">条展示记录</span></span><span><b>3D → 2D</b> <span data-i18n="animals.projection">连续投影</span></span><span><b>GBIF</b> <span data-i18n="animals.source">数据来源</span></span></div>
+            </div>
+            <ul class="project-tech"><li>MapLibre GL</li><li>JavaScript</li><li>Vite</li><li>Cloudflare</li></ul>
+            <div class="project-links">
+              <a href="https://animals-3d.pages.dev/" target="_blank" rel="noreferrer"><span data-i18n="project.openSite">打开项目网站</span> <span>↗</span></a>
+              <a href="/assets/animals-3d.png" target="_blank" rel="noreferrer"><span data-i18n="project.viewInterface">查看真实界面</span> <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="featured-project reverse reveal">
+          <div class="project-visual project-visual--words">
+            <div class="typewords-browser">
+              <div class="typewords-browser__bar"><span></span><span></span><span></span><b>typewords.cc</b></div>
+              <div class="typewords-browser__screen">
+                    <img src="/assets/typewords-words.png" alt="TypeWords 官网真实的单词详情与跟写练习界面" data-i18n-attr="alt:typewords.wordsAlt" loading="lazy" />
+                    <img class="typewords-browser__secondary" src="/assets/typewords-articles.png" alt="TypeWords 官网真实的文章练习界面" data-i18n-attr="alt:typewords.articlesAlt" loading="lazy" />
+              </div>
+              <div class="typewords-browser__badge"><img src="/assets/typewords-owl.png" alt="" loading="lazy" /><span data-i18n="typewords.badge">输入，复习，真正记住。</span></div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker" data-i18n="project.featured">重点作品</p>
+            <h3 data-i18n="typewords.title">TypeWords · 英语单词训练软件</h3>
+            <div class="project-description">
+              <p data-i18n="typewords.paragraph1">TypeWords 把“背单词”改造成了一个以键入为核心的学习流程：不是反复点选答案，而是通过跟写、听写、自测、默写和随机复习等模式，让拼写、发音和记忆在一次次输入中建立联系。</p>
+              <p data-i18n="typewords.paragraph2">产品同时覆盖单词、文章和学习资料。FSRS 间隔复习算法会根据记忆状态安排下一次复习，错词会自动回到循环里；数据默认保存在本地，打开网站即可使用，也为 Web、小程序和 VSCode 等不同场景保留了延展空间。</p>
+              <div class="metric-row"><span><b>7</b> <span data-i18n="typewords.modes">种练习模式</span></span><span><b>50+</b> <span data-i18n="typewords.wordBanks">内置词库</span></span><span><b data-i18n="typewords.localFirst">本地优先</b> <span data-i18n="typewords.offline">离线学习</span></span></div>
+            </div>
+            <ul class="project-tech"><li>React</li><li>TypeScript</li><li>Tauri</li><li>SQLite</li><li>Vite</li></ul>
+            <div class="project-links">
+              <a href="https://typewords.cc/" target="_blank" rel="noreferrer"><span data-i18n="project.openSite">打开项目网站</span> <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="featured-project reveal">
+          <div class="project-visual project-visual--qpet">
+            <div class="qpet-showcase">
+              <div class="qpet-sprite-stage">
+                <span class="qpet-sprite-label">Q-PET / PENGUIN</span>
+                <img src="/assets/qpet-penguin.png" alt="Q-Pet Level 2 企鹅桌宠角色" data-i18n-attr="alt:qpet.imageAlt" loading="lazy" />
+              </div>
+              <div class="qpet-sprite-caption"><i></i><span data-i18n="qpet.caption">真实角色资源 · Level 2</span></div>
+            </div>
+          </div>
+          <div class="project-content">
+            <p class="project-kicker" data-i18n="project.featured">重点作品</p>
+            <h3 data-i18n="qpet.title">Q-Pet · 桌面陪伴与效率工具</h3>
+            <div class="project-description">
+              <p data-i18n="qpet.paragraph1">Q-Pet 是一个面向 Windows 的桌面陪伴工具，目标是在编码、学习和日常工作之间提供一个轻量的陪伴入口。项目把桌宠角色、专注记录、提醒与成长反馈放进同一个可持续使用的桌面体验里。</p>
+              <p data-i18n="qpet.paragraph2">这次展示只使用项目资源包中的真实企鹅角色，不再虚构不存在的控制台截图。企鹅的等级、表情和动作资源可以作为桌宠状态的视觉反馈，让效率功能保持一点亲切感。</p>
+            </div>
+            <ul class="project-tech"><li>C#</li><li>WPF</li><li>WinUI 3</li><li>.NET 8</li><li data-i18n="qpet.localData">本地数据</li></ul>
+          </div>
+        </article>
+
+        <div class="project-grid reveal">
+          <article class="mini-card">
+            <div class="mini-card__icons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H4v16h16V4h-6V2h8v20H2V2h8v2Zm3 0v9.2l2.6-2.6L17 12l-5 5-5-5 1.4-1.4 2.6 2.6V4h2Z"/></svg></div>
+            <h3 data-i18n="cards.data.title">真实数据整理</h3><p data-i18n="cards.data.copy">为动物图谱建立物种索引、详情数据与媒体授权流程，把复杂资料整理成可浏览的产品体验。</p>
+            <ul><li data-i18n="cards.data.tag1">数据清洗</li><li data-i18n="cards.data.tag2">内容设计</li><li data-i18n="cards.data.tag3">性能优化</li></ul>
+          </article>
+          <article class="mini-card">
+            <div class="mini-card__icons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5.1 3.4 9.7 8 11 4.6-1.3 8-5.9 8-11V5l-8-3Zm0 2.1L18 6.3V11c0 4-2.5 7.6-6 8.8C8.5 18.6 6 15 6 11V6.3l6-2.2Zm-1 3.4h2v5h-2v-5Zm0 7h2v2h-2v-2Z"/></svg></div>
+            <h3 data-i18n="cards.usability.title">细节与可用性</h3><p data-i18n="cards.usability.copy">在加载反馈、无障碍动效、异常提示和响应式布局上持续打磨，让产品不只“能用”，也更好用。</p>
+            <ul><li data-i18n="cards.usability.tag1">UX 细节</li><li data-i18n="cards.usability.tag2">无障碍</li><li data-i18n="cards.usability.tag3">响应式</li></ul>
+          </article>
+          <article class="mini-card">
+            <div class="mini-card__icons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v2H5v3H3V3h5Zm13 5h-2V5h-3V3h5v5ZM8 21H3v-5h2v3h3v2Zm13 0h-5v-2h3v-3h2v5ZM8 8h8v8H8V8Zm2 2v4h4v-4h-4Z"/></svg></div>
+            <h3 data-i18n="cards.product.title">从想法到产品</h3><p data-i18n="cards.product.copy">独立完成需求梳理、界面设计、技术实现和迭代验证，在真实项目中建立完整的产品视角。</p>
+            <ul><li data-i18n="cards.product.tag1">产品思维</li><li data-i18n="cards.product.tag2">原型设计</li><li data-i18n="cards.product.tag3">全栈实践</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section journey" id="journey">
+        <h2 class="section-title reveal"><span>03.</span> <span data-i18n="journey.title">我正在前往哪里</span></h2>
+        <div class="journey-grid reveal">
+          <div class="journey-tabs" role="tablist" aria-label="成长方向" data-i18n-attr="aria-label:journey.tabs">
+            <button role="tab" aria-selected="true" data-tab="design" data-i18n="journey.tabDesign">全栈设计</button>
+            <button role="tab" aria-selected="false" data-tab="product" data-i18n="journey.tabProduct">产品实践</button>
+            <button role="tab" aria-selected="false" data-tab="collab" data-i18n="journey.tabCollab">寻求合作</button>
+          </div>
+          <div class="journey-panel" data-panel="design">
+            <h3 data-i18n="journey.design.title">把设计判断与开发能力放在一起</h3><p class="period" data-i18n="journey.design.period">现在 · 持续学习中</p>
+            <ul><li data-i18n="journey.design.item1">从用户目标出发，独立完成信息结构、视觉界面与交互实现。</li><li data-i18n="journey.design.item2">继续补足前后端能力，让创意不受实现边界限制。</li><li data-i18n="journey.design.item3">在每一次迭代中关注性能、可访问性与使用反馈。</li></ul>
+          </div>
+          <div class="journey-panel" data-panel="product" hidden>
+            <h3 data-i18n="journey.product.title">用真实作品验证想法</h3><p class="period" data-i18n="journey.product.period">3 个完整项目 · 仍在增加</p>
+            <ul><li data-i18n="journey.product.item1">桌面应用、学习工具与数据可视化网站都有实际落地经验。</li><li data-i18n="journey.product.item2">不满足于静态展示，更关心产品在真实场景中的持续使用。</li><li data-i18n="journey.product.item3">将复杂功能拆成清晰流程，并用细节降低学习成本。</li></ul>
+          </div>
+          <div class="journey-panel" data-panel="collab" hidden>
+            <h3 data-i18n="journey.collab.title">和重视体验的人一起做点好东西</h3><p class="period" data-i18n="journey.collab.period">开放合作 · 欢迎交流</p>
+            <ul><li data-i18n="journey.collab.item1">愿意参与网站、桌面软件与创意交互产品的设计或开发。</li><li data-i18n="journey.collab.item2">希望接触真实客户需求，在反馈中持续优化自己的方案。</li><li data-i18n="journey.collab.item3">如果你有一个值得实现的想法，欢迎和我聊聊。</li></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <p class="eyebrow reveal" data-i18n="contact.eyebrow">04. 接下来呢？</p>
+        <h2 class="reveal" data-i18n="contact.title">来聊聊吧</h2>
+        <p class="reveal" data-i18n="contact.copy">无论你有一个想做的网站、需要优化的软件体验，还是只想交流一个有趣的想法，我都很乐意收到你的消息。</p>
+        <a class="outline-button reveal" href="mailto:wshixiaotang@163.com" data-contact-trigger data-i18n="contact.cta">向我打个招呼</a>
+      </section>
+    </main>
+
+    <footer>
+      <p data-i18n="footer.madeBy">由小唐设计与制作 · 2026</p>
+      <p class="credit"><span data-i18n="footer.credit">设计框架参考</span> <a href="https://github.com/bchiang7/v4" target="_blank" rel="noreferrer">Brittany Chiang v4</a></p>
+    </footer>
+
+    <div class="contact-modal" data-contact-modal aria-hidden="true">
+      <div class="contact-modal__backdrop" data-modal-close></div>
+      <section class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" tabindex="-1">
+        <button class="contact-modal__close" type="button" data-modal-close aria-label="关闭联系弹窗" data-i18n-attr="aria-label:modal.close">×</button>
+        <p class="eyebrow" data-i18n="modal.eyebrow">保持联系</p>
+        <h2 id="contact-modal-title" data-i18n="modal.title">你好，很高兴认识你</h2>
+        <p data-i18n="modal.copy">你好，我非常欢迎你来联系我，不管是提出建议或者学习交流，这是我的邮箱：</p>
+        <a class="contact-modal__email" href="mailto:wshixiaotang@163.com">wshixiaotang@163.com</a>
+        <a class="outline-button" href="mailto:wshixiaotang@163.com" data-i18n="modal.send">发送邮件</a>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
