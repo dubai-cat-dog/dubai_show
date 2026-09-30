@@ -66,3 +66,18 @@ test('The cat persona has an accessible hover/focus tilt stage', () => {
   assert.match(html, /class="portrait-head"/);
   assert.match(readFileSync(new URL('src/styles.css', root), 'utf8'), /cat-head-tilt/);
 });
+
+test('GitHub Pages uses the repository base path', () => {
+  const viteConfig = readFileSync(new URL('vite.config.js', root), 'utf8');
+  const workflow = readFileSync(new URL('.github/workflows/deploy.yml', root), 'utf8');
+
+  assert.match(viteConfig, /base:\s*['"]\/dubai_show\/['"]/);
+  assert.match(workflow, /npm ci/);
+  assert.match(workflow, /npm run build/);
+  assert.match(workflow, /actions\/upload-pages-artifact@v3/);
+  assert.match(workflow, /actions\/deploy-pages@v4/);
+});
+
+test('Static interface links remain relative for GitHub Pages project sites', () => {
+  assert.match(html, /href="\.\/assets\/animals-3d\.png"/);
+});
